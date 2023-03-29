@@ -1,78 +1,62 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 header {
-   display: flex;
-   /* flex-wrap: wrap; */
-   justify-content: space-between;
-   padding: 20px;
-   /* background-color: blue; */
-   /* background-image: ; */
-   /* color: yellow; */
-   background-image: url("../img/header-background.jpg");
-   width: 100%;
-   /* position: fixed; */
-
-}
-
-#background-picture {
-    
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  /* padding: 20px; */
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  background-color: red;
+  color: #ffffff;
 }
 
 header h1 {
-    padding-top: 3%;
-    font-size: 40px;
-    /* outline: 5px solid black; */
-}
-
-.strokeme
-{
-    color: yellow;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;  
+  display: inline-block;
+  font-size: 48px;
+  background-color: #2a607c;
+  padding-left: 60px;
+  padding-right: 10px;
 }
 
 header nav {
-   padding-top: 3%;
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
 }
 
 header nav a {
-    
+  display: inline-block;
+  margin-left: 25px;
+
+  color: #ffffff;
+  text-decoration: underline;
 }
 
-button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 4px;
+header .strokeme
+{
+  color: yellow;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;  
 }
 
-button:hover {
-    background-color: white;
-    color: #4CAF50;
-    
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+.hero {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("../img/header-background.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
-
-  /* Floats object from the left. */
+/* Floats object from the left. */
 .float-left {
     float: left;
     margin-right: 25px;
@@ -84,83 +68,80 @@ button:hover {
     margin-left: 25px;
 }
 
-main {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-    margin-top: 2%;
-
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #ffffff;
-  }
-
-main img {
-    max-height: 200px;
-    transition: .2s;
-  }
-
-main img:hover {
-    transform: scale(1.2);
-    opacity: 0.7;
+.column-1 {
+  float: left;
+  width: 25%;
+  height: 100%;
+  padding: 5px 10px 5px 150px;
+  
+  text-align: right;
 }
 
-main img:hover .middle {
-    opacity: 1;
+.column-2 {
+  float: right;
+  width: 75%;
+  padding: 5px 50px 5px 20px;
+
+  border-left: 2px solid black;
 }
 
-/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity */
-
-/* .text {
-    background-color: #04AA6D;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
-
-.middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-  } */
-
-footer {
-    padding: 30px;
-    background-color: brown;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  padding-bottom: 25px;
 }
 
-footer h2 {
-    text-align: center;
-    color: aqua;
+div img {
+  max-height: 200px;
+  transition: .2s;
+}
+
+div img:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+div img:hover .middle {
+  opacity: 1;
+}
+
+div nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+div nav a {
+  display: inline-block;
+  margin-left: 25px;
+
+  justify-content: center;
+  color: black;
+  text-decoration: underline;
 }
 
 /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
 
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {
-    header {
-      background: #772014;
-    }
+  header {
+    background: #772014;
   }
+}
   
   /* Large smartphones - navbar changes color */
-  @media screen and (max-width: 768px) {
-    nav {
-      background-color: #bb8588;
-    }
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: #bb8588;
   }
+}
   
   /* Small smartphones - image placeholders change color */
-  @media screen and (max-width: 576px) {
-    .sample-img {
-      background-color: #8ac4ff;
-    }
+@media screen and (max-width: 576px) {
+  .sample-img {
+    background-color: #8ac4ff;
   }
+}
