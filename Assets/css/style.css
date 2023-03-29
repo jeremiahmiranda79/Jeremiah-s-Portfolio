@@ -8,9 +8,9 @@ header {
   /* padding: 20px; */
   padding-top: 10px;
   padding-bottom: 15px;
-  padding-right: 20px;
-  background-color: red;
-  color: #ffffff;
+  padding-right: 25px;
+  background-color:#8ac4ff;
+  /* color: #ffffff; */
 }
 
 header h1 {
@@ -29,17 +29,22 @@ header nav {
   font-size: 20px;
 }
 
+header h1 {
+  color: yellow;
+}
+
 header nav a {
   display: inline-block;
   margin-left: 25px;
 
-  color: #ffffff;
+  color: yellow;
+  /* color: #ffffff; */
   text-decoration: underline;
 }
 
 header .strokeme
 {
-  color: yellow;
+  /* color: yellow; */
   text-shadow:
   -1px -1px 0 #000,
   1px -1px 0 #000,
@@ -50,11 +55,27 @@ header .strokeme
 .hero {
   height: 200px;
   width: 100%;
-  margin-bottom: 25px;
-  background-image: url("../img/header-background.jpg");
-  background-size: cover;
-  background-position: center;
+  /* margin-bottom: 25px; */
+  /* margin-right: 100px; */
+  background-image: url("../img/smileyfacestudios.png"), 
+  url("../img/header-background.jpg");
+  background-repeat: no-repeat;
+  background-size:contain, cover;
+  background-position: right, center;
 }
+
+main {
+  background-image: url("..//img/main-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  /* position: fixed; */
+}
+
+/* #tile-puzzles {
+  height: 200%;
+  display: inline;
+} */
 
 /* Floats object from the left. */
 .float-left {
@@ -82,7 +103,13 @@ header .strokeme
   width: 75%;
   padding: 5px 50px 5px 20px;
 
+  /* background-color: #0072bb;; */
+
   border-left: 2px solid black;
+}
+
+.about-me {
+  background-color: #0072bb;
 }
 
 .row::after {
@@ -121,6 +148,8 @@ div nav a {
   justify-content: center;
   color: black;
   text-decoration: underline;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
