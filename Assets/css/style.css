@@ -1,3 +1,7 @@
+:root {
+  --background-blue: #8ac4ff; 
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,7 +13,8 @@ header {
   padding-top: 10px;
   padding-bottom: 15px;
   padding-right: 25px;
-  background-color:#8ac4ff;
+  /* background-color:#8ac4ff; */
+  background-color: var(--background-blue);
   /* color: #ffffff; */
 }
 
@@ -55,6 +60,8 @@ header .strokeme
 .hero {
   height: 200px;
   width: 100%;
+
+  /* background-color: black; */
   /* margin-bottom: 25px; */
   /* margin-right: 100px; */
   background-image: url("../img/smileyfacestudios.png"), 
@@ -64,47 +71,129 @@ header .strokeme
   background-position: right, center;
 }
 
-main {
+/* main {
   background-image: url("..//img/main-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  /* position: fixed; */
-}
-
-/* #tile-puzzles {
-  height: 200%;
-  display: inline;
+  /* position: fixed; *//*
 } */
 
-/* Floats object from the left. */
-.float-left {
-    float: left;
-    margin-right: 25px;
+.jumbotron {
+  width: 100%;
+  height: 100vh;
+  background-color: blue; 
+  color: white;
 }
 
+/* MAIN SECTION, CARD STYLES */
+/* create our main grid with flexbox */
+main {
+	width: 96%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* using a desktop-first approach, set base column width to be 1/3 of available width and we'll update it using media queries for smaller screen sizes */
+.card-container {
+	flex: 1 1 calc(100% / 3);
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	/* when the screen resizes, make it so our columns don't jump in size */
+	transition: flex-basis 500ms linear;
+}
+
+
+.card {
+	display:inline-flex;
+	flex-direction: column;
+	min-height: 100%;
+	padding: 2rem;
+	color: var(--pink);
+	/* outline is like border, but on the outside of the box instead of inside */
+	outline: 2px dashed var(--gin);
+	outline-offset: -2px;
+	transition: all 0.5s ease-in-out;
+
+  background-color: #000;
+}
+
+.card h2 {
+	/* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+	position: relative;
+	margin: -4rem 0 1.5rem 0;
+	padding: 0.5rem 1rem;
+	border: 2px solid var(--gin);
+	border-radius: 8px;
+	background-color: var(--outer-space);
+	transition: all 0.5s ease-in-out;
+}
+
+.card:hover,
+.card:hover h2 {
+	box-shadow: inset 0px 0px 8px var(--pink), 0 0 15px var(--pink);
+}
+
+.card p {
+	/* set styles to make it so code wraps in <pre> instead of overflowing */
+	white-space: pre-wrap;
+	overflow: auto;
+	tab-size: 4;
+	/* use linear-gradient() function to create a fading background  */
+	background-image: linear-gradient(
+		rgba(232, 102, 236, 0.3) 0%,
+		rgba(232, 102, 236, 0.6) 100%
+	);
+	color: var(--gin);
+	border-radius: 8px;
+	padding: 1.2rem 1rem;
+	/* each card's code block grows to occupy all the available space */
+	display: flex;
+	flex-grow: 1;
+}
+
+/* Floats object from the left. */
+/* .float-left {
+    float: left;
+    margin-right: 25px;
+} */
+
 /* Floats the object from the right. */
-.float-right {
+/* .float-right {
     float: right;
     margin-left: 25px;
+} */
+
+.row {
+  /* width: 100%; */
+  width: 96%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .column-1 {
   float: left;
   width: 25%;
-  height: 100%;
-  padding: 5px 10px 5px 150px;
-  
+  padding: 10px 10px 10px 10px;
   text-align: right;
 }
 
 .column-2 {
+  /* display: inline-flex;
+  justify-content: flex-start; */
+  /* width: 96%; */
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
   float: right;
   width: 75%;
-  padding: 5px 50px 5px 20px;
-
-  /* background-color: #0072bb;; */
-
+  padding: 10px 10px 10px 10px;
   border-left: 2px solid black;
 }
 
@@ -137,7 +226,7 @@ div nav {
   padding-top: 15px;
   margin-right: 20px;
   text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
   font-size: 20px;
 }
 
@@ -152,25 +241,17 @@ div nav a {
   padding-bottom: 25px;
 }
 
-/* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
-
-/* Tablets - header changes color */
+/* using a desktop-first approach, use `max-width` values going from wide -> narrow for a responsive design */
 @media screen and (max-width: 992px) {
-  header {
-    background: #772014;
-  }
+	/* on tablets, set cards to be 50% of the width */
+	.card-container {
+		flex-basis: 50%;
+	}
 }
-  
-  /* Large smartphones - navbar changes color */
 @media screen and (max-width: 768px) {
-  nav {
-    background-color: #bb8588;
-  }
-}
-  
-  /* Small smartphones - image placeholders change color */
-@media screen and (max-width: 576px) {
-  .sample-img {
-    background-color: #8ac4ff;
-  }
+	/* on mobile devices, set cards to be 100% of the width */
+	.card-container {
+		flex-basis: 100%;
+		/* margin-bottom: 1.5rem; */
+	}
 }
