@@ -294,17 +294,29 @@ div nav a {
 	/* on tablets, set cards to be 50% of the width */
   .flex-card:first-child {
     flex-basis: 50%;
-    min-height: 90px;
+    min-height: 125px;
   }
 
   .flex-card {
     flex-basis: 50%;
-    min-height: 90px;
+    min-height: 125px;
   }
 
   header {
     display: flex;
     flex-direction: column;
+  }
+
+  .column-2 {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    margin: 0 auto;
+    float: right;
+    width: 75%; */
+    padding: 10px 75px 10px 10px;
+    /* border-left: 2px solid black; */
   }
 }
 
