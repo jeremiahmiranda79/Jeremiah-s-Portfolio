@@ -241,6 +241,37 @@ div nav a {
 /* using a desktop-first approach, use `max-width` values going from wide -> narrow for a responsive design */
 @media screen and (max-width: 992px) {
 	/* on tablets, set cards to be 50% of the width */
+  p {
+    font-size: 25px;
+    /* position: relative;
+    margin: 0 0 .05rem 0; */
+  }
+  
+  header {
+    /* padding-top: 10px;
+    padding-bottom: 15px;
+    padding-right: 25px; */
+    /* background-color: var(--background-blue);
+    color: var(--header-text-color); */
+  }
+
+  header h1 {
+    display: inline-block;
+    font-size: 50px;
+    /* background-color: var(--header-background); */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  header nav {
+    padding-top: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    float: right;
+    font-size: 30px;
+    align-items: center;
+  }
+
   .flex-card:first-child {
     flex-basis: 50%;
     min-height: 175px;
