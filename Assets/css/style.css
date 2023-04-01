@@ -1,12 +1,21 @@
 :root {
   --background-blue: #8ac4ff; 
   --header-text-color: rgb(226, 226, 23);
+  --highlight-blue: rgb(15, 15, 244);
+  --outline-blue: rgb(15, 15, 77);
+  --header-background: #2a607c;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+p {
+  font-size: 20px;
+  position: relative;
+	margin: 0 0 .05rem 0;
 }
 
 header {
@@ -20,7 +29,7 @@ header {
 header h1 {
   display: inline-block;
   font-size: 48px;
-  background-color: #2a607c;
+  background-color: var(--header-background);
   padding-left: 60px;
   padding-right: 10px;
 }
@@ -39,7 +48,7 @@ header nav a {
   text-decoration: underline;
 }
 
-header .strokeme
+.strokeme
 {
   text-shadow:
   -1px -1px 0 #000,
@@ -60,7 +69,6 @@ header .strokeme
 }
 
 /* MAIN SECTION, CARD STYLES */
-/* create our main grid with flexbox */
 main {
 	/* width: 96%; */
   width: 100%;
@@ -76,86 +84,28 @@ main {
   /* position: fixed; */
 }
 
-/* using a desktop-first approach, set base column width to be 1/3 of available width and we'll update it using media queries for smaller screen sizes */
-/* .card-container {
-	flex: 1 1 calc(100% / 3);
-	padding: 1.5rem;
-	margin-bottom: 1.5rem;
-	when the screen resizes, make it so our columns don't jump in size
-	transition: flex-basis 500ms linear;
-} */
-
-/* .card-container-large {
-  flex: 1 1 calc(100% /3);
-	padding: 1.5rem;
-	margin-bottom: 1.5rem;
-	when the screen resizes, make it so our columns don't jump in size
-	transition: flex-basis 500ms linear;
-}  */
-
-/* .card-large {
-  display:inline-flex;
-	flex-direction: column;
-	
-  height: 700px;
-  width: 97.5%;
-
-	padding: 2rem;
-	color: var(--pink);
-	outline is like border, but on the outside of the box instead of inside
-	outline: 2px dashed var(--gin);
-	outline-offset: -2px;
-	transition: all 0.5s ease-in-out;
-
-  background-color: #000;
-} */
-
-/* .card {
-	display:inline-flex;
-	flex-direction: column;
-	min-height: 100%;
-	padding: 2rem;
-	color: var(--pink);
-	outline is like border, but on the outside of the box instead of inside
-	outline: 2px dashed var(--gin);
-	outline-offset: -2px;
-	transition: all 0.5s ease-in-out;
-
-  background-color: #000;
-} */
-
-/* .card h2 { */
-	/* use position and negative margins to move title of card over the card's outline and create an overlap effect */
-	/* position: relative;
-	margin: -4rem 0 1.5rem 0;
+.title-card {
+  /*use position and negative margins to move title of card over the 
+  card's outline and create an overlap effect */
+	position: relative;
+	margin: -4rem 0 3rem 0;
 	padding: 0.5rem 1rem;
-	border: 2px solid var(--gin);
+	border: 2px solid var(--outline-blue);
 	border-radius: 8px;
-	background-color: var(--outer-space);
-	transition: all 0.5s ease-in-out; */
-/* } */
+	background-color: var(--header-background);
+  color: var(--header-text-color);
+  font-size: 25px;
 
-.card:hover,
-.card:hover h2 {
-	box-shadow: inset 0px 0px 8px var(--pink), 0 0 15px var(--pink);
+  flex-basis: calc(50% - 2em);
+  /* display: flex; */
+  /* align-items:flex-end; */
+  min-height: 50px;
+  margin: 1em;
 }
 
-.card p {
-	/* set styles to make it so code wraps in <pre> instead of overflowing */
-	white-space: pre-wrap;
-	overflow: auto;
-	tab-size: 4;
-	/* use linear-gradient() function to create a fading background  */
-	background-image: linear-gradient(
-		rgba(232, 102, 236, 0.3) 0%,
-		rgba(232, 102, 236, 0.6) 100%
-	);
-	color: var(--gin);
-	border-radius: 8px;
-	padding: 1.2rem 1rem;
-	/* each card's code block grows to occupy all the available space */
-	display: flex;
-	flex-grow: 1;
+.title-card p {
+  font-size: 16px;
+  text-decoration: none;
 }
 
 .row {
@@ -178,79 +128,72 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-  
 	margin: 0 auto;
   float: right;
   width: 75%;
-  padding: 10px 150px 10px 10px;
+  padding: 10px 10px 10px 10px;
   border-left: 2px solid black;
 }
 
-/* added in OH */
 .flex-card {
   flex-basis: calc(50% - 2em);
   display: flex;
   align-items:flex-end;
-
   min-height: 320px;
-
   margin: 1em;
-  background-color: #000;
+  /* outline is like border, but on the outside of the box instead of inside */
+	outline: 2px dashed var(--outline-blue);
+	outline-offset: -2px;
 }
 
 .flex-card:first-child {
   flex-basis: 100%;
-
   min-height: 665px; 
-  /* max-width: 1200px; */
-
-  /* height: fit-content;
-  width: fit-content; */
 }
+
+
 
 .tile-puzzles {
   background-image: url("../img/tile-puzzles-screenshot.png");
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size:cover;
   background-position: center;
 }
 
 .word-scramble {
   background-image: url("../img/word-scramble-screenshot.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
 .ohare-says {
   background-image: url("../img/ohare-says-screenshot.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
 .lost-luggage {
   background-image: url("../img/lost-luggage-screenshot.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
 .space-invaders {
   background-image: url("../img/space-invaders-screenshot.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
 .tic-tac-toe {
   background-image: url("../img/tic-tac-toe.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
-
-/* end of added in OH */
 
 .about-me {
   background-color: #0072bb;
@@ -263,9 +206,15 @@ main {
   padding-bottom: 25px;
 }
 
+.column-2 p {
+  padding: 0px 10px 0px 20px;
+}
+
 .column-2 a:hover {
   transform: scale(1.1);
   opacity: 0.7;
+
+  box-shadow: inset 0px 0px 8px var(--highlight-blue), 0 0 15px var(--highlight-blue);
 }
 
 nav a:hover {
@@ -295,6 +244,16 @@ div nav a {
   .flex-card:first-child {
     flex-basis: 50%;
     min-height: 125px;
+  }
+
+  .title-card {
+    flex-basis: 50%;
+    min-height: 25px;
+    font-size: 10px;
+  }
+
+  .title-card p {
+    font-size: 8px;
   }
 
   .flex-card {
