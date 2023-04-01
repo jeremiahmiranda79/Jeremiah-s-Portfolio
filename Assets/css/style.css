@@ -243,7 +243,7 @@ div nav a {
 	/* on tablets, set cards to be 50% of the width */
   .flex-card:first-child {
     flex-basis: 50%;
-    min-height: 125px;
+    min-height: 175px;
   }
 
   .title-card {
@@ -258,7 +258,7 @@ div nav a {
 
   .flex-card {
     flex-basis: 50%;
-    min-height: 125px;
+    min-height: 175px;
   }
 
   header {
@@ -274,7 +274,7 @@ div nav a {
     margin: 0 auto;
     /* float: right; */
     width: 70%;
-    padding: 10px 75px 10px 10px;
+    padding: 5px 5px 5px 5px;
     /* border-left: 2px solid black; */
   }
 
