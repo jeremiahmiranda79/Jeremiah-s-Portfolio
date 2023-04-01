@@ -257,7 +257,7 @@ div nav a {
 
   header h1 {
     display: inline-block;
-    font-size: 50px;
+    font-size: 60px;
     /* background-color: var(--header-background); */
     padding-left: 10px;
     padding-right: 10px;
@@ -268,7 +268,7 @@ div nav a {
     margin-left: 25px;
     margin-right: 25px;
     float: right;
-    font-size: 30px;
+    font-size: 40px;
     align-items: center;
   }
 
