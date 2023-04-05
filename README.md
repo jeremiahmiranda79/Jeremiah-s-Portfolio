@@ -10,11 +10,11 @@ A short description explaining what the project will do.
 - I have also included tools that I use to build applications.
 - Finally I gave the user access to different ways to contact me. 
 
-## Installation
+## Simple Installation
 
 Simpily follow this  link to view my portfolio. https://jeremiahmiranda79.github.io/Jeremiah-s-Portfolio/
 
-# Usage
+## Usage
 
 You can use the navigation bar to find the information your most interested in.
 
