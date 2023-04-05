@@ -14,7 +14,7 @@ A short description explaining what the project will do.
 
 Simpily follow this  link to view my portfolio. https://jeremiahmiranda79.github.io/Jeremiah-s-Portfolio/
 
-## Usage
+# Usage
 
 You can use the navigation bar to find the information your most interested in.
 
@@ -22,11 +22,11 @@ You can use the navigation bar to find the information your most interested in.
 
 Click on the project picture to try out the applications.
 
-![screenshot](assets/img/Projects-Screenshot.png)
+![screenshot](./assets/img/Projects-Screenshot.png)
 
 Use the footer to find out how to contact me directly.
 
-![screenshot](assets/img/contact-info-screenshot.png)
+![screenshot](./assets/img/contact-info-screenshot.png)
 
 ## License
 
