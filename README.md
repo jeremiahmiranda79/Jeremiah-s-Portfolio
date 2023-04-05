@@ -2,7 +2,7 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+A short description explaining what the project will do.
 
 - This project is to showcase my work to potential clients or employers.
 - I wanted a place to put all of my projects in one place that can be accessable to anyone who     wants to test or view them.
@@ -18,7 +18,7 @@ Simpily follow this  link to view my portfolio. https://jeremiahmiranda79.github
 
 You can use the navigation bar to find the information your most interested in.
 
-![alt text](assets/img/Navigation-Screenshot.png)
+![alt text](./assets/img/Navigation-Screenshot.png)
 
 Click on the project picture to try out the applications.
 
