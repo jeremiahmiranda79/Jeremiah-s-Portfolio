@@ -18,15 +18,15 @@ Simpily follow this  link to view my portfolio. https://jeremiahmiranda79.github
 
 You can use the navigation bar to find the information your most interested in.
 
-![screenshot](./assets/img/Navigation-Screenshot.png)
+![screenshot](./Assets/img/Navigation-Screenshot.png)
 
 Click on the project picture to try out the applications.
 
-![screenshot](./assets/img/Projects-Screenshot.png)
+![screenshot](./Assets/img/Projects-Screenshot.png)
 
 Use the footer to find out how to contact me directly.
 
-![screenshot](./assets/img/contact-info-screenshot.png)
+![screenshot](./Assets/img/contact-info-screenshot.png)
 
 ## License
 
