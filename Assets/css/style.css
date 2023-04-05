@@ -1,3 +1,4 @@
+/* colors for the app */
 :root {
   --background-blue: #8ac4ff; 
   --header-text-color: rgb(226, 226, 23);
@@ -6,11 +7,14 @@
   --header-background: #2a607c;
 }
 
+/* sets universal elements */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 
 p {
   font-size: 20px;
@@ -45,9 +49,10 @@ header nav a {
   display: inline-block;
   margin-left: 25px;
   color: var(--header-text-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
+/* adds a pencil stroke border for the text */
 .strokeme
 {
   text-shadow:
@@ -57,36 +62,32 @@ header nav a {
   1px 1px 0 #000;  
 }
 
+/* creates the hero image with a portrait overlap */
 .hero {
   height: 200px;
   width: 100%;
   background-image: url("../img/smileyfacestudios.png"), 
   url("../img/header-background.jpg");
-
   background-repeat: no-repeat;
   background-size:contain, cover;
   background-position: right, center;
 }
 
-/* MAIN SECTION, CARD STYLES */
 main {
-	/* width: 96%; */
   width: 100%;
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-
   background-image: url("..//img/main-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  /* position: fixed; */
 }
 
-.title-card {
-  /*use position and negative margins to move title of card over the 
+/*use position and negative margins to move title of card over the 
   card's outline and create an overlap effect */
+.title-card {
 	position: relative;
 	margin: -4rem 0 3rem 0;
 	padding: 0.5rem 1rem;
@@ -95,10 +96,7 @@ main {
 	background-color: var(--header-background);
   color: var(--header-text-color);
   font-size: 25px;
-
   flex-basis: calc(50% - 2em);
-  /* display: flex; */
-  /* align-items:flex-end; */
   min-height: 50px;
   margin: 1em;
 }
@@ -135,6 +133,7 @@ main {
   border-left: 2px solid black;
 }
 
+/* defines the flexable propertes for the cards */
 .flex-card {
   flex-basis: calc(50% - 2em);
   display: flex;
@@ -146,59 +145,17 @@ main {
 	outline-offset: -2px;
 }
 
+/* defines first flexable card to be 2x the size of the rest*/
 .flex-card:first-child {
   flex-basis: 100%;
   min-height: 665px; 
-}
-
-
-
-.tile-puzzles {
-  background-image: url("../img/tile-puzzles-screenshot.png");
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center;
-}
-
-.word-scramble {
-  background-image: url("../img/word-scramble-screenshot.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.ohare-says {
-  background-image: url("../img/ohare-says-screenshot.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.lost-luggage {
-  background-image: url("../img/lost-luggage-screenshot.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.space-invaders {
-  background-image: url("../img/space-invaders-screenshot.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.tic-tac-toe {
-  background-image: url("../img/tic-tac-toe.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .about-me {
   background-color: #0072bb;
 }
 
+/* resets the rows */
 .row::after {
   content: "";
   clear: both;
@@ -210,13 +167,14 @@ main {
   padding: 0px 10px 0px 20px;
 }
 
+/* creates an effect that highlights the card when the card has a pointer on top of it */
 .column-2 a:hover {
   transform: scale(1.1);
   opacity: 0.7;
-
   box-shadow: inset 0px 0px 8px var(--highlight-blue), 0 0 15px var(--highlight-blue);
 }
 
+/* creates an effect that increases the size of the card when the card has a pointer on top of it */
 nav a:hover {
   transform: scale(1.1);
 }
@@ -238,27 +196,19 @@ div nav a {
   padding-bottom: 25px;
 }
 
-/* using a desktop-first approach, use `max-width` values going from wide -> narrow for a responsive design */
+/* Using a desktop-first approach,  we use `max-width` 
+values going from wide -> narrow */
+
+/* Tablets */
 @media screen and (max-width: 992px) {
 	/* on tablets, set cards to be 50% of the width */
   p {
     font-size: 25px;
-    /* position: relative;
-    margin: 0 0 .05rem 0; */
   }
   
-  header {
-    /* padding-top: 10px;
-    padding-bottom: 15px;
-    padding-right: 25px; */
-    /* background-color: var(--background-blue);
-    color: var(--header-text-color); */
-  }
-
   header h1 {
     display: inline-block;
     font-size: 75px;
-    /* background-color: var(--header-background); */
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -298,27 +248,23 @@ div nav a {
   }
 
   .column-2 {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-    
     margin: 0 auto;
-    /* float: right; */
     width: 70%;
     padding: 5px 5px 5px 5px;
-    /* border-left: 2px solid black; */
   }
 
   .column-1 {
-    /* float: left; */
     width: 30%; 
-    /* padding: 10px 20px 10px 10px; */
-    /* text-align: right; */
   }
 }
 
-@media screen and (max-width: 768px) {
-	/* on mobile devices, set cards to be 100% of the width */
+/* 
+  TODO 
+*/
+
+/* Large smartphones */
+/* @media screen and (max-width: 768px) {
+	 on mobile devices, set cards to be 100% of the width 
   .flex-card:first-child {
     flex-basis: 100%
   }
@@ -330,5 +276,22 @@ div nav a {
   header {
     display: flex;
     flex-direction: column;
+  }
+} */
+
+/* Small smartphones*/
+@media screen and (max-width: 576px) {
+  .flex-card:first-child {
+    flex-basis: 100%
+  }
+
+  .flex-card {
+    flex-basis: 100%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
   }
 }

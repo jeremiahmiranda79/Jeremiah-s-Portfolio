@@ -1,3 +1,5 @@
+/* Resets the CSS for combating different browsers rules. */
+
 * {
     margin: 0;
     padding: 0;
