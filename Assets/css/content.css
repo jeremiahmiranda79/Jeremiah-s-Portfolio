@@ -40,3 +40,10 @@
     background-size: cover;
     background-position: center;
   }
+
+  .buonos-pizza {
+    background-image: url("../img/login-menu.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
