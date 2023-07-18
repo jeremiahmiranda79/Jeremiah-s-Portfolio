@@ -47,3 +47,38 @@
     background-size: cover;
     background-position: center;
   }
+
+  .note-taker {
+    background-image: url("../img/Screenshot-home-page.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .weather-dashboard {
+    background-image: url("../img/Screenshot-General-App.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .work-day-scheduler {
+    background-image: url("../img/save-data.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .password-generator {
+    background-image: url("../img/generate-password.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .buonos-trivia {
+    background-image: url("../img/start-screen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
